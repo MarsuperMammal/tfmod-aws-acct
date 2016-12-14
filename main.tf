@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "ec2_self_describe" {
 }
 
 data "template_file" "ec2_assume_role" {
-  template = "${file("templates/assume_role_policy.json")}"
+  template = "${file("templates/assume_role_policy.json.tpl")}"
   vars {
     aws_service = "ec2.amazonaws.com"
   }
