@@ -32,7 +32,7 @@ data "aws_iam_policy_document" "flowlog-assumerole" {
 data "aws_iam_policy_document" "ec2_self_describe" {
   statement {
     actions = [
-      "ec2:Describe*"
+      "ec2:*"
     ]
     resources = [
       "arn:aws:ec2:*"
