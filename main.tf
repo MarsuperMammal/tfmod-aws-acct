@@ -34,6 +34,9 @@ data "aws_iam_policy_document" "ec2_self_describe" {
     actions = [
       "ec2:*"
     ]
+    resources = [
+      "arn:aws:ec2:::*"
+    ]
     effect = "Allow"
   }
 }
