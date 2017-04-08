@@ -1,6 +1,3 @@
-variable "cloud_trail_bucket" {}
-variable "trailname" { default = "default" }
-
 data "aws_iam_policy_document" "flowlog" {
   statement {
     actions = [
@@ -121,6 +118,3 @@ data "aws_iam_policy_document" "cloudtrail" {
     }
   }
 }
-
-output "flowlogrole" { value = "${aws_iam_role.flowlog.arn}" }
-output "describe_tags_self" { value ="${aws_iam_instance_profile.self_tags.id}" }
